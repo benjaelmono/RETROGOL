@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETROGOL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#products">Productos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <img src="logo.png" alt="Logo" style="height:50px;">
+        </div>
+    </header>
+<div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="imagenes/slide1.jpg" alt="Slide 1" />
+            <img src="imagenes/slide2.jpg" alt="Slide 2" />
+            <img src="imagenes/slide3.jpg" alt="Slide 3" />
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <main>
+
+        <section id="home"><h1>Bienvenido a nuestra tienda</h1><p>¡Camisetas de fútbol retro originales!</p></section>
+        <section id="about"><h2>Sobre Nosotros</h2><p>Amantes del fútbol y de la historia, traemos a vos las mejores camisetas retro.</p></section>
+        <section id="products">
+             <h2>Productos</h2>
+            <div class="product-list">
+                <a href="producto1.html" target="_blank" class="product-card">
+                    
+                    <h3>Producto 1</h3>
+<img src="https://static.wixstatic.com/media/850697_7af1ccaf8c5f4a4fac10a42fa6284e2c~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg" alt="Producto 1" width="150" height="auto">
+                    <p>Click para ver más detalles.</p>
+                </a>
+                <a href="producto2.html" target="_blank" class="product-card">
+                    
+                    <h3>Producto 2</h3>
+<img src="https://acdn-us.mitiendanube.com/stores/216/721/products/1000192084-60fa6f6f21c79c645117066084384137-480-0.png" alt="Producto 2"width="150" height="auto">
+                    <p>Click para ver más detalles.</p>
+                </a>
+                <a href="producto3.html" target="_blank" class="product-card">
+                    
+                    <h3>Producto 3</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT83bQnAKBZCxCmooKNtN5Ksgl6D2nzl5UpWQ&s" alt="Producto 3"width="150" height="auto">
+                    <p>Click para ver más detalles.</p>
+                </a>
+<div onclick="window.open('producto4.html','_blank')" class="product-card">
+                    <h3>Producto 4</h3>
+ <img src="https://acdn-us.mitiendanube.com/stores/216/721/products/1000223244-35a50ee4c0ca3ed78d17124370644596-640-0.png" alt="Producto 1" class="product-image" height=170 width=auto>
+                    <p>Click para ver más detalles.</p>
+                </div>
+                <div onclick="window.open('producto5.html','_blank')" class="product-card">
+                    <h3>Producto 5</h3>
+ <img src="https://trizop.com/wp-content/uploads/2021/04/final-ucl-ac-milan-06-07-1.webp" alt="Producto 1" class="product-image" />
+                    <p>Click para ver más detalles.</p>
+                </div>
+                <div onclick="window.open('producto6.html','_blank')" class="product-card">
+                    <h3>Producto 6</h3>
+ <img src="https://http2.mlstatic.com/D_NQ_NP_818432-MLA82018719780_022025-O.webp" alt="Producto 1" class="product-image" />
+                    <p>Click para ver más detalles.</p>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; RERTOGOL 2025. CONSEGUI YA TUS CAMISETAS FAVORITAS DE LA MEJOR CALIDAD.</p>
+ <a href="https://www.instagram.com/retrogol2025/"  target="_blank">
+<img src="https://wallpapers.com/images/hd/instagram-black-background-1920-x-1440-p20ti2xt91fe1h1d.jpg" alt="instagram logo" style="height:100px">
+</a>
+<a href="https://www.tiktok.com/@retrogol2025?_t=ZM-8vwcrWJAJuA&_r=1"  target="_blank">
+<img src="https://i.pinimg.com/736x/94/5b/a4/945ba4bd227423ce490ceb0e3c8d9a9b.jpg" alt="instagram logo" style="height:100px">
+</a>
+    </footer>
+<script>
+        const slide = document.querySelector('.carousel-slide');
+        const images = document.querySelectorAll('.carousel-slide img');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        let counter = 0;
+        const size = images[0].clientWidth;
+
+        function updateCarousel() {
+            slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+
+        nextBtn.addEventListener('click', () => {
+            counter = (counter + 1) % images.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            counter = (counter - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        setInterval(() => {
+            counter = (counter + 1) % images.length;
+            updateCarousel();
+        }, 5000);
+    </script>
+</body>
+</html>

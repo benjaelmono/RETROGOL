@@ -1,0 +1,36 @@
+
+:root { --verde:#207f42; --azul:#0a1ab7; --negro:#000; --blanco:#fff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial,sans-serif; color:var(--negro); background:var(--blanco); line-height:1.6; }
+header { background:var(--negro); position:sticky; top:0; z-index:1000; }
+.header-content { display:flex; align-items:center; justify-content:space-between; padding:0 2rem; animation:fadeSlideDown 1s ease forwards; }
+nav ul { display:flex; list-style:none; animation:fadeSlideDown 1.2s ease forwards; }
+nav a { color:var(--blanco); text-decoration:none; font-weight:bold; margin:0 1rem; transition:.3s; }
+nav a:hover { color:var(--verde); }
+main { padding:2rem; }
+section { margin-bottom:3rem; padding:1.5rem; border-radius:8px; background:var(--azul); color:var(--blanco); }
+#products { background:var(--azul); }
+.product-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
+.product-card { background:var(--blanco); color:var(--negro); padding:1rem; border-radius:8px; text-align:center; text-decoration:none; box-shadow:0 2px 4px rgba(0,0,0,0.1); transition:.3s; }
+.product-card:hover { transform:translateY(-5px); background:#f4f4f4; }
+.product-image { width:100%; max-width:150px; margin-bottom:1rem; }
+form { display:flex; flex-direction:column; }
+textarea { margin-top:.5rem; padding:.5rem; border:1px solid var(--negro); border-radius:4px; resize:vertical; }
+button { margin-top:1rem; padding:.7rem; background:var(--negro); color:var(--blanco); border:none; border-radius:4px; cursor:pointer; font-weight:bold; transition:.3s; }
+button:hover { background:var(--azul); }
+footer { text-align:center; padding:1rem; background:var(--negro); color:var(--blanco); }
+@keyframes fadeSlideDown {
+
+    0% { opacity:0; transform:translateY(-20px); }
+    100% { opacity:1; transform:translateY(0); }
+ .auth-container { max-width:400px; margin:2rem auto; background:var(--blanco); padding:2rem; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); text-align:center; }
+        .auth-container button { width:100%; }
+        .image-row {
+            display:flex;
+            width:100%;
+        }
+        .image-row img {
+            width:50%;
+            height:auto;
+            display:block;
+}
